@@ -1,0 +1,2 @@
+net use \\143.185.162.164\c$\Users\ccduser\PycharmProjects\pythonProject\QualiCheck\Dependencies Check$giga /user:ger\ccduser
+copy \\143.185.162.164\c$\Users\ccduser\PycharmProjects\pythonProject\QualiCheck\Dependencies\ "C:\Users\mtsadokx\PycharmProjects\pythonProject\CheckSoftware\Local\Backups\2021-07-04" > nul 2>&1
