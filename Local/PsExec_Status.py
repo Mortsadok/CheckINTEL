@@ -5,8 +5,8 @@ from Save import Password
 
 
 def Status(WWID, Status):
-    Ip = '143.185.162.164'
-    Username = 'ccduser'
+    Ip = ''
+    Username = ''
 
     Info = f'C:\PSTools\PsExec.exe \\\\{Ip} -u {Username} -p {Password} -s cmd.exe /c "cd C:\\Users\\ccduser\\PycharmProjects\\pythonProject\\QualiCheck\\Status & C:\\Users\\ccduser\\PycharmProjects\\pythonProject\\venv\\Scripts\\python.exe Employee_Status.py {WWID} {Status}"  > nul 2>&1'
 
@@ -16,8 +16,8 @@ def Status(WWID, Status):
 
 
 def ManualEntry(WWID, CheckIn):
-    Ip = '143.185.162.164'
-    Username = 'ccduser'
+    Ip = ''
+    Username = ''
 
     Info = f'C:\PSTools\PsExec.exe \\\\{Ip} -u {Username} -p {Password} -s cmd.exe /c "cd C:\\Users\\ccduser\\PycharmProjects\\pythonProject\\QualiCheck\\Status & C:\\Users\\ccduser\\PycharmProjects\\pythonProject\\venv\\Scripts\\python.exe Manual_Entry.py {WWID} {CheckIn}" > nul 2>&1'
 
@@ -29,7 +29,7 @@ def ManualEntry(WWID, CheckIn):
 def Excel_Host():
     Go = NewFolder()
 
-    Machine = '143.185.162.164'
+    Machine = ''
     with open(r'C:\Users\mtsadokx\PycharmProjects\pythonProject\CheckSoftware\Local\HostExcel.bat', 'w') as file:
         file.write(
             rf'net use \\{Machine}\c$\Users\ccduser\PycharmProjects\pythonProject\QualiCheck\Dependencies Check$giga /user:ger\ccduser' + '\n')
@@ -58,6 +58,6 @@ def NewFolder():
         print('The folder already exist!')
         return False
 
-Status('11888572', 'Sick-day')
-# ManualEntry('12021975', '08:45')
+# Status('WWID', 'Reason')
+# ManualEntry('WWID', 'Time')
 # Excel_Host()
